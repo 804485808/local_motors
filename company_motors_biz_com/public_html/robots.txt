@@ -1,0 +1,22 @@
+User-agent: *
+Disallow: /products_list/tid_*
+Disallow: /company/companyProfile.html
+Disallow: /contact.html
+
+User-agent:sogou spider
+Disallow: /
+
+User-agent:Sosospider
+Disallow: /
+
+User-agent: Sogou web spider
+Disallow: /
+
+User-agent:sosospider
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: baiduspider
+Disallow: /

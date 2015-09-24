@@ -1,0 +1,5916 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>数据库字典</title>
+	<style type="text/css">
+		* { font-family: Arial, Helvetica, sans-serif, "微软雅黑" , "宋体"; }
+		table { border-collapse: collapse; border: 1px solid #000; width: 99%; }
+		th { font-size: 15px; border: 1px solid #000; color: #FFF; }
+		td { font-size: 12px; border: 1px solid #000; text-align: center; }
+		caption { text-align: left; font-size: 15px; font-weight: bold; margin-bottom: 3px; }
+		hr { border-top: 1px dotted #ccc; margin: 20px 0; }
+		h1 { font-size: 39px; text-align: center; width: 100%; }
+		h3 { text-align: center; width: 100%; color:#ccc; font-size:18px; }
+		tfoot td { text-align: right; font-size: 12px; }
+		strong { color: red; }
+		ol{ padding-left:25px;}
+	</style>
+</head>
+<body>
+	<a name="top"></a>
+	<h1>数据库字典</h1>
+	<h3>生成于2013-04-07</h3>
+	<ol>
+	<li><a href='#category'>表：category </a></li>
+	<li><a href='#category_option'>表：category_option </a></li>
+	<li><a href='#category_value'>表：category_value </a></li>
+	<li><a href='#category_default_option'>表：category_default_option </a></li>
+	<li><a href='#sell'>表：sell </a></li>
+	<li><a href='#sell'>表：sell_data </a></li>
+	<li><a href='#member'>表：member </a></li>
+	<li><a href='#company'>表：company </a></li>
+	<li><a href='#company'>表：company_data </a></li>
+	<li><a href='#comment'>表：comment </a></li>
+	<li><a href='#comment_stat'>表：comment_stat </a></li>
+	<li><a href='#type'>表：type </a></li>
+	<li><a href='#friend'>表：friend </a></li>
+	<li><a href='#inquiry'>表：inquiry </a></li>
+	<li><a href='#message'>表：message </a></li>
+	<li><a href='#tagindex'>表：tagindex </a></li>
+	</ol>
+	
+	<a name="category"></a>
+	<table border="1" cellpadding="3">
+		<thead>
+	  <caption>
+				category表：</caption>
+		</thead>
+		<tbody>
+			<tr bgcolor="#460B6A">
+				<th>
+					字段名
+				</th>
+				<th>
+					类型
+				</th>
+				<th>
+					长度
+				</th>
+				<th>
+					主键
+				</th>
+				<th>
+					自增
+				</th>
+				<th>
+					可为空
+				</th>
+				<th>
+					默认值
+				</th>
+				<th>
+					说明
+				</th>
+			</tr>
+			
+			<tr>
+				<td>
+					catid
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					
+				</td>
+				<td style="text-align: left;">
+					
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					moduleid
+				</td>
+				<td>
+					smallint
+				</td>
+				<td>
+					6
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					((0))
+				</td>
+				<td style="text-align: left;">
+					对应的模型ID
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					catname
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					分类名称
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					catdir
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					分类目录,生成静态文件时使用
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					style
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					分类字体显示的颜色
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					linkurl
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					链接Url , 伪静态时使用
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					letter
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					4
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					首字母
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					level
+				</td>
+				<td>
+					tinyint
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					((1))
+				</td>
+				<td style="text-align: left;">
+					显示等级 
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					item
+				</td>
+				<td>
+					bigint
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					((0))
+				</td>
+				<td style="text-align: left;">
+					目录下产品的数目
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					parentid
+				</td>
+				<td>
+					smallint
+				</td>
+				<td>
+					6
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					((0))
+				</td>
+				<td style="text-align: left;">
+					上一级父类ID
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					arrparentid
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					((0))
+				</td>
+				<td style="text-align: left;">
+					所有父类ID
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					child
+				</td>
+				<td>
+					tinyint
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					((0))
+				</td>
+				<td style="text-align: left;">
+					是否含有子类
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					arrchildid
+				</td>
+				<td>
+					text
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					
+				</td>
+				<td style="text-align: left;">
+					所有子类ID
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					listorder
+				</td>
+				<td>
+					tinyint
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					((0))
+				</td>
+				<td style="text-align: left;">
+					分类的排序
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="10">
+					<a href="#top">返回顶部</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr />
+	
+	<a name="category_option"></a>
+	<table border="1" cellpadding="3">
+		<thead>
+	  <caption>
+				category_option表：</caption>
+		</thead>
+		<tbody>
+		<tr bgcolor="#460B6A">
+			<th>
+				字段名
+			</th>
+			<th>
+				类型
+			</th>
+			<th>
+				长度
+			</th>
+			<th>
+				主键
+			</th>
+			<th>
+				自增
+			</th>
+			<th>
+				可为空
+			</th>
+			<th>
+				默认值
+			</th>
+			<th>
+				说明
+			</th>
+		</tr>
+			
+		
+		<tr>
+			<td>
+				oid
+			</td>
+			<td>
+				bigint
+			</td>
+			<td>
+				20
+			</td>
+			<td>
+				<strong>√</strong>
+			</td>
+			<td>
+				<strong>√</strong>
+			</td>
+			<td>
+				<strong>&nbsp;</strong>
+			</td>
+			<td>
+				
+			</td>
+			<td style="text-align: left;">
+				
+			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				catid
+			</td>
+			<td>
+				int
+			</td>
+			<td>
+				10
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				<strong>&nbsp;</strong>
+			</td>
+			<td>
+				('0')
+			</td>
+			<td style="text-align: left;">
+				分类ID
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<td>
+				type
+			</td>
+			<td>
+				tinyint
+			</td>
+			<td>
+				1
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				<strong>&nbsp;</strong>
+			</td>
+			<td>
+				('0')
+			</td>
+			<td style="text-align: left;">
+				属性类别 如 单行文本 ， 多行文本 ，列表选择(select)等
+			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				name
+			</td>
+			<td>
+				varchar
+			</td>
+			<td>
+				50
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				<strong>&nbsp;</strong>
+			</td>
+			<td>
+				('')
+			</td>
+			<td style="text-align: left;">
+				属性名称
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				value
+			</td>
+			<td>
+				varchar
+			</td>
+			<td>
+				255
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				<strong>&nbsp;</strong>
+			</td>
+			<td>
+				('')
+			</td>
+			<td style="text-align: left;">
+				属性默认值
+			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				listorder
+			</td>
+			<td>
+				smallint
+			</td>
+			<td>
+				4
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				<strong>&nbsp;</strong>
+			</td>
+			<td>
+				('')
+			</td>
+			<td style="text-align: left;">
+				排序
+			</td>
+		</tr>
+	
+	
+	</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="10">
+					<a href="#top">返回顶部</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr />
+	
+	
+	
+	
+	<a name="category_value"></a>
+	<table border="1" cellpadding="3">
+		<thead>
+	  <caption>
+				category_value表：</caption>
+		</thead>
+		<tbody>
+		<tr bgcolor="#460B6A">
+			<th>
+				字段名
+			</th>
+			<th>
+				类型
+			</th>
+			<th>
+				长度
+			</th>
+			<th>
+				主键
+			</th>
+			<th>
+				自增
+			</th>
+			<th>
+				可为空
+			</th>
+			<th>
+				默认值
+			</th>
+			<th>
+				说明
+			</th>
+		</tr>
+			
+		<tr>
+			<td>
+				id
+			</td>
+			<td>
+				bigint
+			</td>
+			<td>
+				20
+			</td>
+			
+			<td>
+				<strong>√</strong>
+			</td>
+			
+			<td>
+				<strong>√</strong>
+			</td>
+			<td>
+				<strong>&nbsp;</strong>
+			</td>
+			<td>
+				
+			</td>
+			<td style="text-align: left;">
+				
+			</td>
+		</tr>
+			
+		
+		<tr>
+			<td>
+				oid
+			</td>
+			<td>
+				bigint
+			</td>
+			<td>
+				20
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				<strong>&nbsp;</strong>
+			</td>
+			<td>
+				
+			</td>
+			<td style="text-align: left;">
+				category_option表中的ID
+			</td>
+		</tr>
+		
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				itemid
+			</td>
+			<td>
+				bigint
+			</td>
+			<td>
+				20
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				<strong>&nbsp;</strong>
+			</td>
+			<td>
+				('')
+			</td>
+			<td style="text-align: left;">
+				对应sell表中的 itemid
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				value
+			</td>
+			<td>
+				varchar
+			</td>
+			<td>
+				255
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				<strong>&nbsp;</strong>
+			</td>
+			<td>
+				('')
+			</td>
+			<td style="text-align: left;">
+				属性值
+			</td>
+		</tr>
+		
+	<tr bgcolor='#E1EAF4'>
+			<td>
+				did</td>
+			<td>
+				bigint
+			</td>
+			<td>
+				20
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				<strong>&nbsp;</strong>
+			</td>
+			<td>
+				('')
+			</td>
+			<td style="text-align: left;">
+				对应default_option表中的 id</td>
+		</tr>
+	
+	<tr>
+			<td>
+				catid
+			</td>
+			<td>
+				int
+			</td>
+			<td>
+				10</td>
+			<td>
+				
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				<strong>&nbsp;</strong>
+			</td>
+			<td>
+				('')
+			</td>
+			<td style="text-align: left;">category表的catid</td>
+		</tr>
+	</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="10">
+					<a href="#top">返回顶部</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr />
+	
+	<a name="category_default_option"></a>
+	<table border="1" cellpadding="3">
+		<thead>
+	  <caption>
+				category_default_option表：
+	  </caption>
+		</thead>
+		<tbody>
+		<tr bgcolor="#460B6A">
+			<th>
+				字段名			</th>
+			<th>
+				类型			</th>
+			<th>
+				长度			</th>
+			<th>
+				主键			</th>
+			<th>
+				自增			</th>
+			<th>
+				可为空			</th>
+			<th>
+				默认值			</th>
+			<th>
+				说明			</th>
+		</tr>
+			
+		
+		<tr>
+			<td>id</td>
+			<td>bigint</td>
+			<td>
+				20			</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>			</td>
+			<td style="text-align: left;">手动生成ID</td>
+		</tr>
+		
+	<tr bgcolor='#E1EAF4'>
+			<td>value</td>
+			<td>
+				varchar			</td>
+			<td>
+				255			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">默认的属性值（categroy表默认属性值的分表）</td>
+		</tr>
+		
+		<tr>
+			<td>catid</td>
+			<td>
+				int			</td>
+			<td>10
+		  </td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>&nbsp;</td>
+			<td style="text-align: left;">属性值对应的分类ID</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>num</td>
+			<td>
+				int			</td>
+			<td>10
+		  </td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>&nbsp;</td>
+			<td style="text-align: left;">分类下属性对应的产品个数</td>
+		</tr>
+		
+		<tr>
+			<td>oid</td>
+			<td>
+				int			</td>
+			<td>10
+		  </td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>&nbsp;</td>
+			<td style="text-align: left;">属性值对应的oid</td>
+		</tr>
+		
+		
+	</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="10">
+					<a href="#top">返回顶部</a>				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr>
+	
+	<a name="sell"></a>
+	<table border="1" cellpadding="3">
+		<thead>
+	  <caption>
+				sell表：</caption>
+		</thead>
+		<tbody>
+		<tr bgcolor="#460B6A">
+			<th>
+				字段名			</th>
+			<th>
+				类型			</th>
+			<th>
+				长度			</th>
+			<th>
+				主键			</th>
+			<th>
+				自增			</th>
+			<th>
+				可为空			</th>
+			<th>
+				默认值			</th>
+			<th>
+				说明			</th>
+		</tr>
+			
+		
+		<tr>
+			<td>
+				itemid			</td>
+			<td>
+				bigint			</td>
+			<td>
+				20			</td>
+			<td>
+				<strong>√</strong>			</td>
+			<td>
+				<strong>√</strong>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>			</td>
+			<td style="text-align: left;">			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				catid			</td>
+			<td>
+				int			</td>
+			<td>
+				10			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>			</td>
+			<td style="text-align: left;">
+				所属分类ID			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				mycatid			</td>
+			<td>
+				bigint			</td>
+			<td>
+				20			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				自定义分类ID 对应表 type			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				typeid			</td>
+			<td>
+				smallint			</td>
+			<td>
+				2			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				供应类型			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				areid			</td>
+			<td>
+				smallint			</td>
+			<td>
+				6			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				地区ID			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				level			</td>
+			<td>
+				tinyint			</td>
+			<td>
+				1			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				推荐等级 1 表示推荐			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				elite			</td>
+			<td>
+				tinyint			</td>
+			<td>
+				1			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				公司首页推荐			</td>
+		</tr>
+		
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				title			</td>
+			<td>
+				varchar			</td>
+			<td>
+				100			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				标题			</td>
+		</tr>
+		
+		
+		<tr>
+			<td>
+				style			</td>
+			<td>
+				varchar			</td>
+			<td>
+				50			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				标题颜色			</td>
+		</tr>
+		
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				fee			</td>
+			<td>
+				float			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				收费积分			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				introduce			</td>
+			<td>
+				varchar			</td>
+			<td>
+				255			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				内容简介			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				model			</td>
+			<td>
+				varchar			</td>
+			<td>
+				100			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				产品型号			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				standard			</td>
+			<td>
+				varchar			</td>
+			<td>
+				100			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				产品规格			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				brand			</td>
+			<td>
+				varchar			</td>
+			<td>
+				100			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				产品品牌			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				unit			</td>
+			<td>
+				varchar			</td>
+			<td>
+				30			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				产品单位			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				minprice			</td>
+			<td>
+				decimal			</td>
+			<td>
+				10,2			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0.00')			</td>
+			<td style="text-align: left;">
+				最小产品价格			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				maxprice			</td>
+			<td>
+				decimal			</td>
+			<td>
+				10,2			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0.00')			</td>
+			<td style="text-align: left;">
+				最大产品价格			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				currency			</td>
+			<td>
+				varchar			</td>
+			<td>
+				15			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				货币单位			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				minamount			</td>
+			<td>
+				float			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>			</td>
+			<td style="text-align: left;">
+				最小起订量			</td>
+		</tr>
+		
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				amount			</td>
+			<td>
+				float			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0.00')			</td>
+			<td style="text-align: left;">
+				供货总量			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				days			</td>
+			<td>
+				smallint			</td>
+			<td>
+				3			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				发货时间			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				keyword			</td>
+			<td>
+				varchar			</td>
+			<td>
+				30			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				产品关键字			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				hits			</td>
+			<td>
+				int			</td>
+			<td>
+				10			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				访问次数			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				thumb			</td>
+			<td>
+				varchar			</td>
+			<td>
+				255			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				产品图片			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				pptword			</td>
+			<td>
+				varchar			</td>
+			<td>
+				255			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				产品属性			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				username			</td>
+			<td>
+				varchar			</td>
+			<td>
+				30			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				用户名			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				groupid			</td>
+			<td>
+				int			</td>
+			<td>
+				10			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				用户组ID			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				company			</td>
+			<td>
+				varchar			</td>
+			<td>
+				150			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				公司名称			</td>
+		</tr>
+			
+		
+		<tr>
+			<td>
+				vip			</td>
+			<td>
+				smallint			</td>
+			<td>
+				2			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				vip指数			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				validated			</td>
+			<td>
+				tinyint			</td>
+			<td>
+				1			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				公司是否认证			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				truename			</td>
+			<td>
+				varchar			</td>
+			<td>
+				50			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				联系人			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				telephone			</td>
+			<td>
+				varchar			</td>
+			<td>
+				50			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				电话			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				mobile			</td>
+			<td>
+				varchar			</td>
+			<td>
+				30			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				移动电话			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				address			</td>
+			<td>
+				varchar			</td>
+			<td>
+				255			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				公司地址			</td>
+		</tr>
+		
+		
+		<tr>
+			<td>
+				email			</td>
+			<td>
+				varchar			</td>
+			<td>
+				50			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				公司mail			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				ali			</td>
+			<td>
+				varchar			</td>
+			<td>
+				30			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				totime			</td>
+			<td>
+				int			</td>
+			<td>
+				10			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				过期时间			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				edittime			</td>
+			<td>
+				int			</td>
+			<td>
+				10			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				修改时间			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				editdate			</td>
+			<td>
+				date			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				修改日期  例如 2013-03-09			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				addtime			</td>
+			<td>
+				int			</td>
+			<td>
+				10			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				添加时间			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				adddate			</td>
+			<td>
+				date			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				添加日期			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				ip			</td>
+			<td>
+				varchar			</td>
+			<td>
+				50			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				status			</td>
+			<td>
+				tinyint			</td>
+			<td>
+				1			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('0')			</td>
+			<td style="text-align: left;">
+				发布状态			</td>
+		</tr>
+		
+		<tr bgcolor='#E1EAF4'>
+			<td>
+				linkurl			</td>
+			<td>
+				varchar			</td>
+			<td>
+				255			</td>
+			<td>			</td>
+			<td>			</td>
+			<td>
+				<strong>&nbsp;</strong>			</td>
+			<td>
+				('')			</td>
+			<td style="text-align: left;">
+				链接地址			</td>
+		</tr>
+		<tr bgcolor='#E1EAF4'>
+		  <td>aliid</td>
+		  <td>bigint</td>
+		  <td>20</td>
+		  <td></td>
+		  <td></td>
+		  <td>&nbsp;</td>
+		  <td>&nbsp;</td>
+		  <td style="text-align: left;">对应采集的alibaba的id</td>
+		  </tr>
+	</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="10">
+					<a href="#top">返回顶部</a>				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr />
+	
+	
+	<a name="member"></a>
+	<table border="1" cellpadding="3">
+		<thead>
+	  <caption>
+				member表：</caption>
+		</thead>
+		<tbody>
+		<tr bgcolor="#460B6A">
+				<th>
+					字段名
+				</th>
+				<th>
+					类型
+				</th>
+				<th>
+					长度
+				</th>
+				<th>
+					主键
+				</th>
+				<th>
+					自增
+				</th>
+				<th>
+					可为空
+				</th>
+				<th>
+					默认值
+				</th>
+				<th>
+					说明
+				</th>
+		  </tr>
+			
+			<tr>
+				<td>
+					userid
+				</td>
+				<td>
+					bigint
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					
+				</td>
+				<td style="text-align: left;">
+					
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					username
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					30
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					用户名
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					company
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					150
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					公司名称
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					passport
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					30
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					通行证
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					password
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					32
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					用户密码
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					payword
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					32
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					支付密码
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					email
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					用户email 不公开的，用于邮件验证和接收系统邮件
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					message
+				</td>
+				<td>
+					smallint
+				</td>
+				<td>
+					6
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					用户站内（新）短信数
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td>
+					online
+				</td>
+				<td>
+					tinyint
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					用户是否在线 1为在线 0为离线或隐身
+				</td>
+			</tr>
+			
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					gender
+				</td>
+				<td>
+					tinyint
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					性别
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					truename
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					姓名
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					mobile
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					30
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					移动电话
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					qq
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					ali
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					30
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					阿里旺旺
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					skype
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					30
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					department
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					30
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					部门
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					career
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					30
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					职位
+				</td>
+			</tr>
+			
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					admin
+				</td>
+				<td>
+					tinyint
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					是否为管理员
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					groupid
+				</td>
+				<td>
+					smallint
+				</td>
+				<td>
+					4
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					当前用户组ID
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					regid
+				</td>
+				<td>
+					smallint
+				</td>
+				<td>
+					4
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					注册用户组ID
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					areaid
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					区域ID
+				</td>
+			</tr>
+			
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					credit
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					积分
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					edittime
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					修改时间
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					regip
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					注册IP
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					regtime
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					注册时间
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					loginip
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					登入IP
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					logintime
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					登入时间
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					logintimes
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					登入次数
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					black
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					站内信息黑名单
+				</td>
+			</tr>
+			
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					send
+				</td>
+				<td>
+					tinyint
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					 是否允许站内信转发到认证的邮箱
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					auth
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					32
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					 验证码
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					authvalue
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					100
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					验证内容说明
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					authtime
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					 验证时间
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					vmail
+				</td>
+				<td>
+					tinyint
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					邮件认证
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					vtruename
+				</td>
+				<td>
+					tinyint
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					实名认证
+				</td>
+			</tr>
+			
+			<tr  bgcolor='#E1EAF4'>
+				<td>
+					vcompany
+				</td>
+				<td>
+					tinyint
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					公司认证
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					inviter
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					30
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					推荐人
+				</td>
+			</tr>
+		
+	</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="10">
+					<a href="#top">返回顶部</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr />
+	
+	
+	
+	<a name="company"></a>
+	<table border="1" cellpadding="3">
+		<thead>
+	  <caption>
+				company表：</caption>
+		</thead>
+		<tbody>
+			<tr bgcolor="#460B6A">
+				<th>
+					字段名
+				</th>
+				<th>
+					类型
+				</th>
+				<th>
+					长度
+				</th>
+				<th>
+					主键
+				</th>
+				<th>
+					自增
+				</th>
+				<th>
+					可为空
+				</th>
+				<th>
+					默认值
+				</th>
+				<th>
+					说明
+				</th>
+			</tr>
+			
+			<tr>
+				<td>
+					userid
+				</td>
+				<td>
+					bigint
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					用户ID
+				</td>
+			</tr>
+			
+			
+			<tr  bgcolor='#E1EAF4'>
+				<td>
+					username
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					30
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					公司认证
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					groupid
+				</td>
+				<td>
+					smallint
+				</td>
+				<td>
+					4
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					用户组ID
+				</td>
+			</tr>
+			
+			
+			<tr  bgcolor='#E1EAF4'>
+				<td>
+					company
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					150
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					公司名称
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					vip
+				</td>
+				<td>
+					smallint
+				</td>
+				<td>
+					2
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					Vip的指数
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					type
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					100
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					公司类型 个人或者企业单位
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					catid
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					公司行业分类 ID
+				</td>
+			</tr>
+			
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					areaid
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					地区ID
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					mode
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					100
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					经营模式
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					capital
+				</td>
+				<td>
+					float
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					注册资本
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					regunit
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					15
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					注册资本货币单位
+				</td>
+			</tr>
+			
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					size
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					100
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					公司规模 员工人数
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					regyear
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					4
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					注册年份
+				</td>
+			</tr>
+			
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					regcity
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					60
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					注册城市
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					business
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					主要经营范围
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					telephone
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					电话
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					fax
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					传真
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					mail
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					公司的mail 对外公开
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					address
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					公司地址
+				</td>
+			</tr>
+			
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					zipcode
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					邮编
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					homepage
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					公司主页
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					fromtime
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					VIP开始时间
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					totime
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					VIP过期时间
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					thumb
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					公司 Logo图 或 形象图
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					introduce
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					公司 简要介绍
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					hits
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					公司 访问次数
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					linkurl
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					公司首页地址 一般伪静态时使用
+				</td>
+			</tr>
+			
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="10">
+					<a href="#top">返回顶部</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr />
+	
+	
+	<a name="comment"></a>
+	<table border="1" cellpadding="3">
+		<thead>
+	  <caption>
+				comment表：</caption>
+		</thead>
+		<tbody>
+			<tr bgcolor="#460B6A">
+				<th>
+					字段名
+				</th>
+				<th>
+					类型
+				</th>
+				<th>
+					长度
+				</th>
+				<th>
+					主键
+				</th>
+				<th>
+					自增
+				</th>
+				<th>
+					可为空
+				</th>
+				<th>
+					默认值
+				</th>
+				<th>
+					说明
+				</th>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					itmeid
+				</td>
+				<td>
+					bigint
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					ID
+				</td>
+				<td style="text-align: left;">
+					
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					itemid_id
+				</td>
+				<td>
+					bigint
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					暂时对应sell表的 ID
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					itemid_title
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					暂时对应sell表的 title
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					itemid_linkurl
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					暂时对应sell表的 linkurl
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					itemid_username
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					暂时对应sell表的 username
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					star
+				</td>
+				<td>
+					tinyint
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					评价
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					content
+				</td>
+				<td>
+					text
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					评论内容
+				</td>
+			</tr>
+			
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					qid
+				</td>
+				<td>
+					bigint
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					引用ID
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					quotation
+				</td>
+				<td>
+					text
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					
+				</td>
+				<td style="text-align: left;">
+					引用内容
+				</td>
+			</tr>
+			
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					username
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					30
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					用户名
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					hidden
+				</td>
+				<td>
+					tinyint
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					是否匿名评论
+				</td>
+			</tr>
+			
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					addtime
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					评论时间
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					quote
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					引用数量
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					ip
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					status
+				</td>
+				<td>
+					tinyint
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					评论状态 是否已经审核
+				</td>
+			</tr>
+			
+	  </tbody>
+		<tfoot>
+			<tr>
+				<td colspan="10">
+					<a href="#top">返回顶部</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr />
+	
+	
+	
+	<a name="comment_stat"></a>
+	<table border="1" cellpadding="3">
+		<thead>
+	  <caption>
+				comment表：</caption>
+		</thead>
+		<tbody>
+			<tr bgcolor="#460B6A">
+				<th>
+					字段名
+				</th>
+				<th>
+					类型
+				</th>
+				<th>
+					长度
+				</th>
+				<th>
+					主键
+				</th>
+				<th>
+					自增
+				</th>
+				<th>
+					可为空
+				</th>
+				<th>
+					默认值
+				</th>
+				<th>
+					说明
+				</th>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					sid
+				</td>
+				<td>
+					bigint
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					
+				</td>
+				<td style="text-align: left;">
+					ID
+				</td>
+			</tr>
+			
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					itemid
+				</td>
+				<td>
+					bigint
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					暂时对应sell表中的itemid
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					comment
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					评论数
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					star1
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					评星等级 好评
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					star2
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					评星等级 中评
+				</td>
+			</tr>
+			
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					star3
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('0')
+				</td>
+				<td style="text-align: left;">
+					评星等级 差评
+				</td>
+			</tr>
+			
+			
+	  </tbody>
+		<tfoot>
+			<tr>
+				<td colspan="10">
+					<a href="#top">返回顶部</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr />
+	
+	
+	<a name="type"></a>
+	<table border="1" cellpadding="3">
+		<thead>
+	  <caption>
+				type表(用户自定义分类表)：</caption>
+		</thead>
+		<tbody>
+			<tr bgcolor="#460B6A">
+				<th>
+					字段名
+				</th>
+				<th>
+					类型
+				</th>
+				<th>
+					长度
+				</th>
+				<th>
+					主键
+				</th>
+				<th>
+					自增
+				</th>
+				<th>
+					可为空
+				</th>
+				<th>
+					默认值
+				</th>
+				<th>
+					说明
+				</th>
+			</tr>
+			
+			<tr>
+				<td>
+					tid
+				</td>
+				<td>
+					bigint
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					
+				</td>
+				<td style="text-align: left;">
+					
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					tname
+				</td>
+				<td>
+					varchar
+				</td>
+				<td>
+					100
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					分类名
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					listorder
+				</td>
+				<td>
+					bigint
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					排序
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					userid
+				</td>
+				<td>
+					bigint
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					用户ID
+				</td>
+			</tr>
+			
+			
+	  </tbody>
+		<tfoot>
+			<tr>
+				<td colspan="10">
+					<a href="#top">返回顶部</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr />
+
+
+
+
+	<a name="friend"></a>
+	<table border="1" cellpadding="3">
+		<thead>
+	  <caption>
+				friend表：</caption>
+		</thead>
+		<tbody>
+			<tr bgcolor="#460B6A">
+				<th>
+					字段名
+				</th>
+				<th>
+					类型
+				</th>
+				<th>
+					长度
+				</th>
+				<th>
+					主键
+				</th>
+				<th>
+					自增
+				</th>
+				<th>
+					可为空
+				</th>
+				<th>
+					默认值
+				</th>
+				<th>
+					说明
+				</th>
+			</tr>
+			
+			<tr>
+				<td>
+					fid
+				</td>
+				<td>
+					bigint
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					
+				</td>
+				<td style="text-align: left;">
+					
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					userid
+				</td>
+				<td>
+					bigint
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					用户ID
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					username
+				</td>
+				<td>
+					varchar(100)
+				</td>
+				<td>
+					100
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					对应好友的username(防止混淆 需要更改frenid_userid or friend_username)
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					truename
+				</td>
+				<td>
+					varchar(100)
+				</td>
+				<td>
+					100
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					真是姓名
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					typeid
+				</td>
+				<td>
+					int(11)
+				</td>
+				<td>
+					11
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					好友分组id 对应表friend_type 中的 tid
+				</td>
+			</tr>
+			
+	  </tbody>
+		<tfoot>
+			<tr>
+				<td colspan="10">
+					<a href="#top">返回顶部</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr />
+
+
+	<a name="inquiry"></a>
+	<table border="1" cellpadding="3">
+		<thead>
+	  <caption>
+				inquiry表：</caption>
+		</thead>
+		<tbody>
+			<tr bgcolor="#460B6A">
+				<th>
+					字段名
+				</th>
+				<th>
+					类型
+				</th>
+				<th>
+					长度
+				</th>
+				<th>
+					主键
+				</th>
+				<th>
+					自增
+				</th>
+				<th>
+					可为空
+				</th>
+				<th>
+					默认值
+				</th>
+				<th>
+					说明
+				</th>
+			</tr>
+			
+			<tr>
+				<td>
+					id
+				</td>
+				<td>
+					bigint(20)
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					
+				</td>
+				<td style="text-align: left;">
+					
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					title
+				</td>
+				<td>
+					varchar(255)
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					询单标题
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					touser
+				</td>
+				<td>
+					varchar(30)
+				</td>
+				<td>
+					30
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					接收询单的用户名
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					fromuser
+				</td>
+				<td>
+					varchar(30)
+				</td>
+				<td>
+					30
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					发送询单的用户名
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					company
+				</td>
+				<td>
+					varchar(100)
+				</td>
+				<td>
+					100
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					发送询单者的公司名
+				</td>
+			</tr>
+
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					country
+				</td>
+				<td>
+					varchar(50)
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					发送询单者的国家
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					truename
+				</td>
+				<td>
+					varchar(30)
+				</td>
+				<td>
+					30
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					发送询单者的联系人名字
+				</td>
+			</tr>
+
+
+
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					telephone
+				</td>
+				<td>
+					varchar(50)
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					发送询单者的电话
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					mobile
+				</td>
+				<td>
+					varchar(20)
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					发送询单者的手机
+				</td>
+			</tr>
+
+
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					email
+				</td>
+				<td>
+					varchar(50)
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					发送询单者的email
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					sid
+				</td>
+				<td>
+					bigint(20)
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					询单产品ID
+				</td>
+			</tr>
+
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					ip
+				</td>
+				<td>
+					varchar(15)
+				</td>
+				<td>
+					15
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					发送询单者的ip
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					postdate
+				</td>
+				<td>
+					int(11)
+				</td>
+				<td>
+					11
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					询单时间
+				</td>
+			</tr>
+
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					status
+				</td>
+				<td>
+					smallint(1)
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					询单状态 0 未审核 1 审核
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					pid
+				</td>
+				<td>
+					bigint(20)
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					询单的父类ID  0 没有父类
+				</td>
+			</tr>
+			
+	  </tbody>
+		<tfoot>
+			<tr>
+				<td colspan="10">
+					<a href="#top">返回顶部</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr />
+
+
+
+
+
+	<a name="message"></a>
+	<table border="1" cellpadding="3">
+		<thead>
+	  <caption>
+				message表：</caption>
+		</thead>
+		<tbody>
+			<tr bgcolor="#460B6A">
+				<th>
+					字段名
+				</th>
+				<th>
+					类型
+				</th>
+				<th>
+					长度
+				</th>
+				<th>
+					主键
+				</th>
+				<th>
+					自增
+				</th>
+				<th>
+					可为空
+				</th>
+				<th>
+					默认值
+				</th>
+				<th>
+					说明
+				</th>
+			</tr>
+			
+			<tr>
+				<td>
+					mid
+				</td>
+				<td>
+					bigint(20)
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					
+				</td>
+				<td style="text-align: left;">
+					
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					title
+				</td>
+				<td>
+					varchar(255)
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					信息标题
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					style
+				</td>
+				<td>
+					varchar(50)
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					typeid
+				</td>
+				<td>
+					smallint(1)
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					定义信息类型：0为普通通话，1为加好友，2为询单
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					content
+				</td>
+				<td>
+					text
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					内容
+				</td>
+			</tr>
+
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					fromuser
+				</td>
+				<td>
+					varchar(30)
+				</td>
+				<td>
+					30
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					发送用户
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					touser
+				</td>
+				<td>
+					varchar(160)
+				</td>
+				<td>
+					160
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					接收用户
+				</td>
+			</tr>
+
+
+
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					addtime
+				</td>
+				<td>
+					int(10)
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					发送时间
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					ip
+				</td>
+				<td>
+					varchar(50)
+				</td>
+				<td>
+					50
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					发送者ip
+				</td>
+			</tr>
+
+
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					isread
+				</td>
+				<td>
+					tinyint(1)
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					0->未读		1->已读
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					issend
+				</td>
+				<td>
+					tinyint(1)
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					0->未发送		1->已发送
+				</td>
+			</tr>
+
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					feedback
+				</td>
+				<td>
+					tinyint(1)
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					是否开启已读反馈 0 未开启 1 开启
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					status
+				</td>
+				<td>
+					tinyint(1)
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					0->垃圾箱		1->已发送		2->草稿箱    其他->
+				</td>
+			</tr>
+
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					status
+				</td>
+				<td>
+					smallint(1)
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					询单状态 0 未审核 1 审核
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					auth
+				</td>
+				<td>
+					varchar(32)
+				</td>
+				<td>
+					32
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					用来验证 快速注册 reg_login/show_quick_reg  && quick_reg
+				</td>
+			</tr>
+
+
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					iid
+				</td>
+				<td>
+					bigint(20)
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					询单id 对应表inquiry 
+				</td>
+			</tr>
+
+		
+		
+			
+	  </tbody>
+		<tfoot>
+			<tr>
+				<td colspan="10">
+					<a href="#top">返回顶部</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr />
+	
+	<a name="tagindex"></a>
+	<table border="1" cellpadding="3">
+		<thead>
+	  <caption>
+				tagindex表：</caption>
+		</thead>
+		<tbody>
+			<tr bgcolor="#460B6A">
+				<th>
+					字段名
+				</th>
+				<th>
+					类型
+				</th>
+				<th>
+					长度
+				</th>
+				<th>
+					主键
+				</th>
+				<th>
+					自增
+				</th>
+				<th>
+					可为空
+				</th>
+				<th>
+					默认值
+				</th>
+				<th>
+					说明
+				</th>
+			</tr>
+			
+			<tr>
+				<td>
+					id
+				</td>
+				<td>
+					bigint(20)
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>√</strong>
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					
+				</td>
+				<td style="text-align: left;">
+					
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					tag
+				</td>
+				<td>
+					varchar(100)
+				</td>
+				<td>
+					100</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					关键词
+				</td>
+			</tr>
+			
+			<tr>
+				<td>totalcc</td>
+				<td>
+					int(10)</td>
+				<td>
+					10</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">总访问量
+					
+				</td>
+			</tr>
+			
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					weekcc
+				</td>
+				<td>int(10)</td>
+				<td>
+					10</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">周访问量</td>
+			</tr>
+			
+			
+			<tr>
+				<td>
+					monthcc
+				</td>
+				<td>int(10)</td>
+				<td>10
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">月访问量</td>
+			</tr>
+
+			<tr bgcolor='#E1EAF4'>
+				<td>weekup</td>
+				<td>int(10)</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					周时间
+				</td>
+			</tr>
+
+			<tr>
+				<td>monthup</td>
+				<td>int(10)</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">月时间</td>
+			</tr>
+
+
+
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					addtime
+				</td>
+				<td>
+					int(10)
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					时间
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					byname</td>
+				<td>int(10) </td>
+				<td>
+					10
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">
+					首字母
+				</td>
+			</tr>
+
+
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					catid
+				</td>
+				<td>int(10) </td>
+				<td>
+					10</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">所属分类</td>
+			</tr>
+			
+			
+
+			<tr>
+				<td>
+					note
+				</td>
+				<td>
+					varchar(30)</td>
+				<td>
+					30</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">备注</td>
+			</tr>
+
+			<tr bgcolor='#E1EAF4'>
+				<td>
+					linkurl
+				</td>
+				<td>varchar(255) </td>
+				<td>
+					255</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					<strong>&nbsp;</strong>
+				</td>
+				<td>
+					('')
+				</td>
+				<td style="text-align: left;">&nbsp;</td>
+			</tr>
+			
+
+		
+		
+			
+	  </tbody>
+		<tfoot>
+			<tr>
+				<td colspan="10">
+					<a href="#top">返回顶部</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<hr />
+	
+	
+</body>
+</html>
